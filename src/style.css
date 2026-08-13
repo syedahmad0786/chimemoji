@@ -1,3 +1,5 @@
+@import "./kit/overlays.css";
+@import "./kit/tokens.css";
 :root {
   --bench: #12140e;
   --olive: #1c2014;
@@ -57,7 +59,12 @@ body {
   padding: 28px 0 64px;
 }
 
+.lab { perspective: 1200px; }
+
 .plaque {
+  --rx: 0deg;
+  --ry: 0deg;
+  --z: 0px;
   position: relative;
   background:
     linear-gradient(180deg, #3a341c, #2a2614 40%, #1a180e);
@@ -68,6 +75,17 @@ body {
     inset 0 1px 0 #e6c86a66;
   padding: 22px 22px 28px;
   text-align: center;
+  transform: rotateX(var(--rx)) rotateY(var(--ry)) translateZ(var(--z));
+  transform-style: preserve-3d;
+}
+
+.mark {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 0 var(--brass-deep);
 }
 
 .bay {
@@ -120,7 +138,12 @@ h1 {
   align-items: start;
 }
 
+.benches { perspective: 1100px; }
+
 .tray {
+  --rx: 0deg;
+  --ry: 0deg;
+  --z: 0px;
   background: var(--olive);
   border: 2px solid #3a4028;
   box-shadow:
@@ -128,6 +151,8 @@ h1 {
     0 0 0 3px #1a1c12,
     4px 6px 0 #0a0b08;
   padding: 14px;
+  transform: rotateX(var(--rx)) rotateY(var(--ry)) translateZ(var(--z));
+  transform-style: preserve-3d;
 }
 
 .tray-label {
@@ -467,4 +492,11 @@ h1 {
   .fuse-col { padding-top: 4px; }
   .grid { grid-template-columns: repeat(8, 1fr); }
   .stamp-warn { position: static; display: inline-block; margin-top: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plaque, .tray, .fuse, .crt-line, .scan::after {
+    animation: none;
+    transform: none !important;
+  }
 }

@@ -1,4 +1,6 @@
 import "./style.css";
+import { animate } from "motion";
+import { bindTilt, reducedMotion } from "./studio";
 import { drawCreature, paintPlate, codeTag } from "./creature";
 import { CATALOG, firstEmoji } from "./emoji";
 import { myth } from "./lore";
@@ -142,4 +144,10 @@ setSlot("b", b);
 document.querySelector("#fuse")!.addEventListener("click", () => void fuse());
 document.querySelector("#export")!.addEventListener("click", () => void downloadPlate());
 window.addEventListener("resize", paintView);
+bindTilt(document.querySelector(".plaque"), 6, 12);
+bindTilt(document.querySelector("#tray-a"), 8, 14);
+bindTilt(document.querySelector("#tray-b"), 8, 14);
+if (!reducedMotion()) {
+  animate(".plaque", { opacity: [0, 1], y: [-10, 0] }, { duration: 0.6 });
+}
 void fuse();

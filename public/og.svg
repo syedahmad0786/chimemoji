@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img">
+  <rect width="1200" height="630" fill="#1a1c14"/>
+  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="#c4b44a" stroke-width="2" opacity="0.55"/>
+  <text x="80" y="140" fill="#c4b44a" font-family="Georgia, serif" font-size="28" letter-spacing="8">FT–007</text>
+  <text x="80" y="280" fill="#e8e2c4" font-family="Georgia, serif" font-size="86">Chimemoji</text>
+  <text x="80" y="360" fill="#e8e2c4" font-family="Georgia, serif" font-size="32" opacity="0.7">Bay 7 fusion bench</text>
+  <text x="80" y="540" fill="#c4b44a" font-family="ui-monospace, monospace" font-size="22">a Fun Toy</text>
+</svg>
