@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chimemoji — Emoji Fusion Laboratory</title>
+    <meta
+      name="description"
+      content="Bay 7 fusion bench. Pick two emoji. Receive a hybrid creature, a name, and a three-sentence mythology. Deterministic. Shareable."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grime" aria-hidden="true"></div>
+    <div class="hazard" aria-hidden="true"></div>
+
+    <main class="lab">
+      <header class="plaque">
+        <p class="bay">BAY 7 · FUSION BENCH · FT–011</p>
+        <h1>Chimemoji</h1>
+        <p class="crt-line" id="status">EMOJI FUSION LABORATORY · DO NOT FEED SPECIMENS</p>
+        <p class="stamp-warn">CONTAMINATED SURFACE</p>
+      </header>
+
+      <section class="benches" aria-label="Parent specimens">
+        <article class="tray" id="tray-a">
+          <p class="tray-label">PARENT A · LIVE WELL</p>
+          <div class="preview" id="preview-a" aria-live="polite">🐙</div>
+          <label class="field">
+            <span>Any glyph</span>
+            <input
+              id="input-a"
+              type="text"
+              maxlength="24"
+              autocomplete="off"
+              spellcheck="false"
+              value="🐙"
+            />
+          </label>
+          <div class="grid" id="grid-a" role="listbox" aria-label="Common emoji A"></div>
+        </article>
+
+        <div class="fuse-col">
+          <button type="button" id="fuse" class="fuse">
+            <span class="knob" aria-hidden="true"></span>
+            FUSE
+          </button>
+          <p class="fuse-cap">PRESS TO HYBRIDIZE</p>
+          <div class="dials" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+
+        <article class="tray" id="tray-b">
+          <p class="tray-label">PARENT B · LIVE WELL</p>
+          <div class="preview" id="preview-b" aria-live="polite">☕</div>
+          <label class="field">
+            <span>Any glyph</span>
+            <input
+              id="input-b"
+              type="text"
+              maxlength="24"
+              autocomplete="off"
+              spellcheck="false"
+              value="☕"
+            />
+          </label>
+          <div class="grid" id="grid-b" role="listbox" aria-label="Common emoji B"></div>
+        </article>
+      </section>
+
+      <section class="stage">
+        <div class="crt-bezel">
+          <div class="screws" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div class="crt-well">
+            <canvas id="creature" width="640" height="640" aria-label="Hybrid creature"></canvas>
+            <div class="scan" aria-hidden="true"></div>
+          </div>
+          <div class="readout">
+            <p id="serial">CHM—00000000</p>
+            <p id="codes">U+1F419 × U+2615</p>
+          </div>
+        </div>
+
+        <aside class="clip">
+          <div class="clip-metal" aria-hidden="true"></div>
+          <p class="clip-kicker">FIELD NOTES · NIGHT SHIFT</p>
+          <h2 id="name">—</h2>
+          <p class="parents" id="parents">🐙 × ☕</p>
+          <p id="lore"></p>
+          <p class="stamp-red">FILED</p>
+        </aside>
+      </section>
+
+      <div class="actions">
+        <button type="button" id="export" class="export">EXPORT PLATE · PNG</button>
+      </div>
+    </main>
+
+    <div class="hazard" aria-hidden="true"></div>
+    <footer class="webring">
+      <a href="https://fun-toys.vercel.app">a Fun Toy</a>
+      ·
+      <a href="https://term-specter.vercel.app">prev</a>
+      ·
+      <a href="https://mild-inconvenience.vercel.app">next</a>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
